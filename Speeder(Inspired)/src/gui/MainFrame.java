@@ -16,23 +16,33 @@ public class MainFrame extends JFrame implements ActionListener, KeyListener
 	public StringParser stringParser;
 	public String myString;
 	public String tokenString;
+	public long speed;
 	
 	//declare components
 	public Container mainContainer;
 	public JLabel stringDisplay;
 	public JButton startButton;
+	public JPanel speedPanel;
+	public JTextField speedField;
+	public JLabel speedDisplay;
 	
 	public MainFrame()
 	{	
 		//initialize variables
 		myString = "Please Press the Start Button!";
 		stringParser = new StringParser(myString);
+		speed = 400;
 		
 		//initialize components
 		mainContainer = this.getContentPane();
 		stringDisplay = new JLabel(myString,0);
 		stringDisplay.setFont(new Font("Dialog", Font.PLAIN, 24));
 		startButton = new JButton("Start");
+		speedField = new JTextField("400");
+		speedField.setSize(new Dimension(100,100));
+		speedDisplay = new JLabel("Speed(WPM)",0);
+		speedDisplay.setSize(new Dimension(100,100));
+		speedPanel = new JPanel();
 		
 		//initialize listeners
 		startButton.addActionListener(this);
@@ -40,14 +50,27 @@ public class MainFrame extends JFrame implements ActionListener, KeyListener
 		
 		//set layout
 		mainContainer.setLayout(new BorderLayout());
+		speedPanel.setLayout(new GridLayout(0,1));
 		
-		//add components to JFrame
+		//add componenets to speedFrame
+		speedPanel.add(new JLabel());
+		speedPanel.add(new JLabel());
+		speedPanel.add(new JLabel());
+		speedPanel.add(speedDisplay);
+		speedPanel.add(speedField);
+		speedPanel.add(new JLabel());
+		speedPanel.add(new JLabel());
+		speedPanel.add(new JLabel());
+		
+		
+		//add components to MainFrame
 		mainContainer.add(startButton, BorderLayout.PAGE_END);
 		mainContainer.add(stringDisplay, BorderLayout.CENTER);
+		mainContainer.add(speedPanel, BorderLayout.LINE_END);
 		
 		//display
 		this.setFocusable(true);
-		this.setSize(500,500);
+		this.setSize(700,300);
 		this.setVisible(true);
 	}
 	
@@ -72,8 +95,17 @@ public class MainFrame extends JFrame implements ActionListener, KeyListener
 		}
 	}
 	
+	public void getSpeed()
+	{
+		//get speed from textField
+		speed = Long.parseLong(speedField.getText(),10);
+	}
+	
 	public void display()
 	{
+		getString();
+		getSpeed();
+		stringParser.setString(myString);
 		for (int i=0; i<stringParser.getNumberOfWords(); i++)
 		{
 			myString = stringParser.getWord(i);
@@ -82,7 +114,7 @@ public class MainFrame extends JFrame implements ActionListener, KeyListener
 			//sleep thread
 			try
 			{
-				Thread.sleep(500);
+				Thread.sleep(100000/speed);
 			} catch (InterruptedException e)
 			{
 				e.printStackTrace();
