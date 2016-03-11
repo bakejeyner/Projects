@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1385316878 source:c:\users\bakejeyner\git\projects\caesarcipher(ascii)\decipher\decipher\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1457656850 source:c:\users\bakejeyner\git\projects\caesarcipher(ascii)\decipher\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

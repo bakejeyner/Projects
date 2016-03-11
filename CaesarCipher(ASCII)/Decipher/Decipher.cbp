@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Decipher" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Decipher" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Dictionary/a.txt" />
+		<Unit filename="Dictionary/b.txt" />
+		<Unit filename="Dictionary/c.txt" />
+		<Unit filename="Dictionary/d.txt" />
+		<Unit filename="Dictionary/e.txt" />
+		<Unit filename="Dictionary/f.txt" />
+		<Unit filename="Dictionary/g.txt" />
+		<Unit filename="Dictionary/h.txt" />
+		<Unit filename="Dictionary/i.txt" />
+		<Unit filename="Dictionary/j.txt" />
+		<Unit filename="Dictionary/k.txt" />
+		<Unit filename="Dictionary/l.txt" />
+		<Unit filename="Dictionary/m.txt" />
+		<Unit filename="Dictionary/n.txt" />
+		<Unit filename="Dictionary/o.txt" />
+		<Unit filename="Dictionary/p.txt" />
+		<Unit filename="Dictionary/q.txt" />
+		<Unit filename="Dictionary/r.txt" />
+		<Unit filename="Dictionary/s.txt" />
+		<Unit filename="Dictionary/t.txt" />
+		<Unit filename="Dictionary/u.txt" />
+		<Unit filename="Dictionary/v.txt" />
+		<Unit filename="Dictionary/w.txt" />
+		<Unit filename="Dictionary/x.txt" />
+		<Unit filename="Dictionary/y.txt" />
+		<Unit filename="Dictionary/z.txt" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
