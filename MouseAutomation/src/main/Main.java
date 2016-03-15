@@ -108,7 +108,7 @@ public class Main
 			Thread t = new Thread(new mouseMover());
 			t.start();
 			
-			Thread.sleep(100);
+			Thread.sleep(1000);
 			
 			for (;;)
 			{
@@ -124,6 +124,7 @@ public class Main
 				mousePoint = MouseInfo.getPointerInfo().getLocation();
 				x = xCord.get();
 				y = yCord.get();
+				
 				
 				//System.out.println("Main x:" + mousePoint.getX() + "\nMain y:" + mousePoint.getY() + "\n + MouseMover x:" + x + "\nMouseMover y:" + y + "\n");
 				if (mousePoint.getX() > x+1 || mousePoint.getX() < x-1 || mousePoint.getY() > y+1 || mousePoint.getY() < y-1)
