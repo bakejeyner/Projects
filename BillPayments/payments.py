@@ -101,3 +101,6 @@ else:
     print(avgList[0][0], ' owes ', avgList[3][0], ' ', round(-avgList[0][1], 2), ' dollars.')
     print(avgList[1][0], ' owes ', avgList[3][0], ' ', round(avgList[0][1] + avgList[3][1], 2), ' dollars.')
     print(avgList[1][0], ' owes ', avgList[2][0], ' ', round(avgList[2][1], 2), ' dollars.')
+
+print "Press any key to continue..."
+raw_input()
