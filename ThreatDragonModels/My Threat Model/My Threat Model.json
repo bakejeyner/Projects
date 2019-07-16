@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "title": "My Threat Model",
+    "owner": "Me",
+    "description": "of a Down."
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "My Threat Model Diagram",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
+    "reviewer": "No One"
+  }
+}
